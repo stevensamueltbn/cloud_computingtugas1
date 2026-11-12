@@ -2,110 +2,476 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Steven - Cloud Computing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steven Samuel Tambunan — Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #101827;
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+:root {
+    --green: #183b32;
+    --cream: #f4f2e9;
+    --lime: #d4ef79;
+    --gray: #747a70;
+    --line: #d9d9cd;
+}
 
-        .container {
-            max-width: 650px;
-            width: 100%;
-            background: #1e293b;
-            padding: 35px;
-            border-radius: 15px;
-            text-align: center;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        h1 {
-            color: #38bdf8;
-            margin-bottom: 10px;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .subtitle {
-            color: #cbd5e1;
-            margin-bottom: 25px;
-        }
+body {
+    background: var(--cream);
+    color: var(--green);
+    font-family: 'DM Sans', sans-serif;
+}
 
-        .card {
-            background: #334155;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            text-align: left;
-        }
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 35px;
+}
 
-        h3 {
-            color: #38bdf8;
-            margin-bottom: 12px;
-        }
+/* NAVIGATION */
 
-        .card p {
-            margin: 8px 0;
-            color: #e2e8f0;
-        }
+nav {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
 
-        footer {
-            margin-top: 20px;
-            color: #94a3b8;
-            font-size: 13px;
-        }
-    </style>
+.logo {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #789b4a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--green);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* HERO */
+
+.hero {
+    padding: 105px 0 90px;
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #789b4a;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: -3px;
+}
+
+.hero h1 em {
+    color: #8ba65c;
+    font-weight: 500;
+}
+
+.hero-description {
+    max-width: 450px;
+    margin-top: 25px;
+    line-height: 1.8;
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--green);
+    color: white;
+    text-decoration: none;
+    padding: 15px 23px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.hero-art {
+    background: var(--green);
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-art::after {
+    content: "S";
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 250px;
+    color: var(--lime);
+    opacity: 0.95;
+    right: 35px;
+    bottom: 15px;
+    line-height: 1;
+}
+
+.art-top, .art-bottom {
+    position: relative;
+    z-index: 1;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.art-bottom {
+    color: var(--lime);
+}
+
+/* SECTION */
+
+section {
+    padding: 75px 0;
+    border-top: 1px solid var(--line);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.section-number {
+    font-size: 11px;
+    color: #8ba65c;
+    letter-spacing: 2px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 60px;
+}
+
+.about-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.about-text {
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--gray);
+}
+
+/* PROFILE */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.profile-item {
+    padding: 25px 15px;
+    border-top: 1px solid var(--line);
+}
+
+.profile-item small {
+    display: block;
+    color: var(--gray);
+    font-size: 11px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.profile-item strong {
+    font-size: 15px;
+}
+
+/* TECHNOLOGY */
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech {
+    border: 1px solid #b8c1ad;
+    padding: 13px 22px;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.tech:hover {
+    background: var(--green);
+    color: white;
+}
+
+/* PROJECT */
+
+.project {
+    background: var(--green);
+    color: var(--cream);
+    padding: 35px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.project small {
+    color: var(--lime);
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+
+.project h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.project p {
+    font-size: 13px;
+    color: #c5d0c4;
+    line-height: 1.8;
+}
+
+.project-version {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    color: var(--lime);
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--gray);
+}
+
+@media(max-width: 700px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 70px 0;
+        gap: 35px;
+    }
+
+    .hero-art {
+        min-height: 230px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .project {
+        grid-template-columns: 1fr;
+    }
+
+    .project-version {
+        font-size: 35px;
+    }
+
+    footer {
+        gap: 15px;
+        flex-direction: column;
+    }
+}
+</style>
 </head>
 
 <body>
-    <div class="container">
 
-        <h1>Halo, Saya Steven! 👋</h1>
-        <p class="subtitle">
-            Website Praktikum Cloud Computing
+<div class="container">
+
+<nav>
+    <div class="logo">ST<span>.</span></div>
+    <div class="nav-links">
+        <a href="#about">ABOUT</a>
+        <a href="#profile">PROFILE</a>
+        <a href="#projects">PROJECTS</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <div>
+        <div class="eyebrow">STUDENT PORTFOLIO / 2026</div>
+
+        <h1>Steven<br>Samuel<br><em>Tambunan.</em></h1>
+
+        <p class="hero-description">
+            A student of Information Systems at Telkom University.
+            Exploring technology, digital experiences, and the
+            possibilities of web development.
         </p>
 
-        <div class="card">
-            <h3>IDENTITAS MAHASISWA</h3>
-            <p>Nama: Steven Samuel Tambunan</p>
-            <p>NIM: 102042400147</p>
-            <p>Program Studi: Sistem Informasi</p>
-            <p>Universitas: Telkom University</p>
-        </div>
-
-        <div class="card">
-            <h3>TEKNOLOGI YANG DIGUNAKAN</h3>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>GitHub</p>
-            <p>Vercel</p>
-        </div>
-
-        <div class="card">
-            <h3>INFORMASI DEPLOYMENT</h3>
-            <p>Platform: Vercel</p>
-            <p>Status: Menunggu Deployment</p>
-            <p>Praktikum: Web Server on Cloud</p>
-        </div>
-
-        <footer>
-            Praktikum Cloud Computing 2026
-            <br>
-            Telkom University
-        </footer>
-
+        <a href="#about" class="hero-button">
+            EXPLORE MY PROFILE ↗
+        </a>
     </div>
+
+    <div class="hero-art">
+        <div class="art-top">PERSONAL IDENTITY / 001</div>
+        <div class="art-bottom">DESIGN · TECHNOLOGY · LEARNING</div>
+    </div>
+</header>
+
+<section id="about">
+    <div class="section-heading">
+        <h2>About Me.</h2>
+        <span class="section-number">01 / INTRODUCTION</span>
+    </div>
+
+    <div class="about-grid">
+        <div class="about-label">A LITTLE INTRODUCTION</div>
+
+        <p class="about-text">
+            Hello! My name is Steven Samuel Tambunan.
+            I am an Information Systems student at Telkom University
+            with an interest in technology and digital development.
+            This website was created as part of my Cloud Computing
+            practical assignment to explore static web hosting
+            and continuous deployment.
+        </p>
+    </div>
+</section>
+
+<section id="profile">
+    <div class="section-heading">
+        <h2>Academic Profile.</h2>
+        <span class="section-number">02 / EDUCATION</span>
+    </div>
+
+    <div class="profile-grid">
+        <div class="profile-item">
+            <small>FULL NAME</small>
+            <strong>Steven Samuel Tambunan</strong>
+        </div>
+
+        <div class="profile-item">
+            <small>STUDENT ID</small>
+            <strong>102042400147</strong>
+        </div>
+
+        <div class="profile-item">
+            <small>STUDY PROGRAM</small>
+            <strong>Sistem Informasi</strong>
+        </div>
+
+        <div class="profile-item">
+            <small>UNIVERSITY</small>
+            <strong>Telkom University</strong>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section-heading">
+        <h2>Tech Stack.</h2>
+        <span class="section-number">03 / TECHNOLOGY</span>
+    </div>
+
+    <div class="tech-list">
+        <span class="tech">HTML5</span>
+        <span class="tech">CSS3</span>
+        <span class="tech">GitHub</span>
+        <span class="tech">Vercel</span>
+        <span class="tech">Web Development</span>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="section-heading">
+        <h2>Project Journal.</h2>
+        <span class="section-number">04 / EXPERIENCE</span>
+    </div>
+
+    <div class="project">
+        <div>
+            <small>FEATURED PROJECT / 2026</small>
+            <h3>Web Server on Cloud</h3>
+            <p>
+                Developing and deploying a static website using
+                GitHub as a source code repository and Vercel
+                as a cloud hosting platform.
+                <br><br>
+                Status: Successfully Deployed
+            </p>
+        </div>
+
+        <div class="project-version">01</div>
+    </div>
+</section>
+
+<footer>
+    <span>© 2026 STEVEN SAMUEL TAMBUNAN</span>
+    <span>BUILT WITH HTML & CSS</span>
+</footer>
+
+</div>
+
 </body>
 </html>
